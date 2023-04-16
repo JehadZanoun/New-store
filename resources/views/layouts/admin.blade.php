@@ -72,8 +72,8 @@
 <!-- ////////////////////////////////////////////////////////////////////////////-->
 @include('admin.includes.footer')
 
-@notify_js
-@notify_render
+{{--@notify_js--}}
+{{--@notify_render--}}
 
 <!-- BEGIN VENDOR JS-->
 <script src="{{asset('assets/admin/vendors/js/vendors.min.js')}}" type="text/javascript"></script>
@@ -127,7 +127,6 @@
     });
     $('#meridians2').timeDropper({
         meridians: true,setCurrentTime: false
-
     });
     $('#meridians3').timeDropper({
         meridians: true,
@@ -139,7 +138,6 @@
     });
     $('#meridians5').timeDropper({
         meridians: true,setCurrentTime: false
-
     });
     $('#meridians6').timeDropper({
         meridians: true,setCurrentTime: false
