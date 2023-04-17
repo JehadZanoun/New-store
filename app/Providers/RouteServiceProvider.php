@@ -50,6 +50,18 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('web')
                 ->namespace($this->namespace)
                 ->group(base_path('routes/web.php'));
+
+            // Route Front
+            Route::middleware('web')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/site.php'));
+
+
+            // Route Admin
+
+            Route::middleware('web')
+                ->namespace($this->namespace)
+                ->group(base_path('routes/admin.php'));
         });
     }
 
@@ -68,20 +80,20 @@ class RouteServiceProvider extends ServiceProvider
 
     // Route Front
 
-    protected function mapSiteRoutes() {
-
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/site.php.php'));
-    }
+//    protected function mapSiteRoutes() {
+//
+//        Route::middleware('web')
+//            ->namespace($this->namespace)
+//            ->group(base_path('routes/site.php.php'));
+//    }
 
 
     // Route Admin
 
-    protected function mapAdminRoutes() {
-
-        Route::middleware('web')
-            ->namespace($this->namespace)
-            ->group(base_path('routes/admin.php'));
-    }
+//    protected function mapAdminRoutes() {
+//
+//        Route::middleware('web')
+//            ->namespace($this->namespace)
+//            ->group(base_path('routes/admin.php'));
+//    }
 }
